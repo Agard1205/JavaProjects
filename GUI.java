@@ -53,14 +53,16 @@ public class GUI implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String user = userText.getText();
         String password = passwordText.getText();
+        String correctUser = "Username";
+        String correctPass = "Password";
 
-        if(user.equals("agard") && password.equals("December5!")){
+        if(user.equals(correctUser) && password.equals(correctPass)){
             success.setText("Login successful!");
         }
-        else if(user.equals("agard") &! password.equals("December5!")){
+        else if(user.equals(correctUser) &! password.equals(correctPass)){
             success.setText("Wrong Password!");
         }
-        else if(password.equals("December5!") &! user.equals("agard")){
+        else if(password.equals(correctPass) &! user.equals(correctUser)){
             success.setText("Wrong Username!");
         }
         else success.setText("Wrong everything!");
